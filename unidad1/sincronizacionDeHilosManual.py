@@ -4,7 +4,7 @@ d1 = 0
 d2 = 0
 resultados = []
 
-def operacionAritmetica(nombre, operacion, segundos):
+def operacion_aritmetica(nombre, operacion, segundos):
     global resultados, d1, d2
     
     while d1 == 0 or d2 == 0:
@@ -24,10 +24,10 @@ def operacionAritmetica(nombre, operacion, segundos):
         resultados.append(d1 / d2)
     print("El hilo: " + nombre + " depositó")
     
-hiloSuma = threading.Thread(target = operacionAritmetica, args = ("Sumador",1, 3))
-hiloResta = threading.Thread(target = operacionAritmetica, args = ("Restador",2, 8))
-hiloMultiplicacion = threading.Thread(target = operacionAritmetica, args = ("Multiplicacion",3, 10))
-hiloDivision = threading.Thread(target = operacionAritmetica, args = ("Divisor",4, 15))
+hiloSuma = threading.Thread(target = operacion_aritmetica, args = ("Sumador",1, 3))
+hiloResta = threading.Thread(target = operacion_aritmetica, args = ("Restador",2, 8))
+hiloMultiplicacion = threading.Thread(target = operacion_aritmetica, args = ("Multiplicacion",3, 10))
+hiloDivision = threading.Thread(target = operacion_aritmetica, args = ("Divisor",4, 15))
 
 hiloSuma.start()
 hiloResta.start()
