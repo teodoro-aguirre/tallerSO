@@ -27,7 +27,7 @@ def video(nombre, segundos):
     while(video.isOpened()):
         res, frame = video.read()
 
-        if(res == True):
+        if res:
             cv2.imshow(VENTANA_VIDEO, frame)
 
             if(cv2.waitKey(24) == ord('s')):
@@ -39,8 +39,8 @@ def video(nombre, segundos):
     cv2.destroyWindow(VENTANA_VIDEO)
 
 
-hiloVideoCamara = threading.Thread(target = video_camara, args = (' da ', 3))
-hiloVideo = threading.Thread(target=video, args=('name', 5))
+hiloVideoCamara = threading.Thread(target = video_camara, args = (' da ', 5))
+hiloVideo = threading.Thread(target=video, args=('name', 20))
 
 
 hiloVideoCamara.start()
