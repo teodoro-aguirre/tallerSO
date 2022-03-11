@@ -25,7 +25,7 @@ def video(nombre, segundos):
 root = tkinter.Tk()
 root.withdraw()
 
-ilename = filedialog.askopenfilename(initialdir = "/", 
+filename = filedialog.askopenfilename(initialdir = "/", 
                                           title = "Selecciona un archivo", 
                                           filetypes = (("Text files", 
                                                         "*.txt*"), 
