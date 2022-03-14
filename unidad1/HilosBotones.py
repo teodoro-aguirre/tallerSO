@@ -73,13 +73,7 @@ def iniciarVideo():
     
 def iniciarWebCam():
     hilo_webcam = threading.Thread(target = video_camara, args=('webcam', 5))
-    hilo_webcam.start()
-    
-
-
-root = Tk()
-root.title('Multimedia')
-root.geometry("500x300")   
+    hilo_webcam.start()  
   
 
 # Enlezamos la función a la acción del botón
